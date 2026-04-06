@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Wallet</title>
+    <link rel="stylesheet" href="css/master.css">
+</head>
+
+<body>
+
+<div class="os-container">
+    <header class="glass-header">
+        <button id="back-btn" class="back-btn hidden" onclick="goBack()">🏠 Home</button>
+        <h1 id="view-title">digital-wallet 📂</h1>
+    </header>
+
+    <main id="main-grid" class="cards-grid">
+        <div class="main-card color-1" onclick="openFolder('identity')">
+            <div class="icon">📂</div>
+            <h3>identity</h3>
+        </div>
+        <div class="main-card color-2" onclick="openFolder('work')">
+            <div class="icon">💼</div>
+            <h3>work</h3>
+        </div>
+        <div class="main-card color-3" onclick="openFolder('finance')">
+            <div class="icon">💳</div>
+            <h3>finance</h3>
+        </div>
+        <div class="main-card color-4" onclick="openFolder('health')">
+            <div class="icon">🏥</div>
+            <h3>health</h3>
+        </div>
+    </main>
+</div>
+
+<dialog id="info-modal" class="glass-modal">
+    <div class="modal-content">
+        <h2 id="modal-title">Document Details</h2>
+        <p id="last-modified"></p>
+
+        <form id="info-form">
+            <div id="dynamic-inputs"></div>
+
+            <img id="image-preview" alt="preview"
+                 class="hidden"
+                 style="width: 100%; border-radius: 15px; margin: 15px 0; border: 1px solid var(--glass);">
+
+            <div class="modal-actions">
+                <button type="button" class="btn-cancel" onclick="closeModal()">Cancel</button>
+                <button type="submit" class="btn-save">Save Data</button>
+            </div>
+        </form>
+    </div>
+</dialog>
+
+<script src="main.js"></script>
+</body>
+</html>
